@@ -9,6 +9,72 @@
     <link rel="stylesheet" href="css/blog.css">
 </head>
 <body>
+
+    <style>
+      /* Dark mode styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        body.dark-mode #app {
+            background-color: #1e1e1e;
+        }
+        body.dark-mode input, body.dark-mode textarea {
+            background-color: #333;
+            color: #fff;
+        }
+        body.dark-mode button {
+            background-color: #444;
+            color: #fff;
+        }
+
+        /* Toggle switch styles */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+        }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        .slider.round {
+            border-radius: 34px;
+        }
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
     <div id="app">
         <div id="intro">
             <h1>My First Blog</h1>
@@ -28,7 +94,10 @@
         <div id="posts-container" style="display:none;">
             <header>
                 <h1>My First Blog</h1>
-                <button id="toggle-mode">Toggle Mode</button>
+                <label class="switch">
+                    <input type="checkbox" id="toggle-mode">
+                    <span class="slider round"></span>
+                </label>
                 <button id="back-btn">Back</button>
             </header>
             <main id="posts-main"></main>
@@ -37,6 +106,7 @@
             </footer>
         </div>
     </div>
+
     <script src="js/logic.js"></script>
     <script src="js/form.js"></script>
     <script src="js/blog.js"></script>

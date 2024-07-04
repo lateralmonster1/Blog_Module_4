@@ -1,0 +1,28 @@
+/* Blog post styles */
+#posts-container {
+    text-align: center;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#posts-main {
+    margin-top: 20px;
+}
+footer {
+    margin-top: 20px;
+}
+#toggle-mode, #back-btn {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+}
+#toggle-mode:hover, #back-btn:hover {
+    background-color: #0056b3;
+}
