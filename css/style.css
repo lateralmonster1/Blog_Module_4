@@ -19,3 +19,4 @@ body {
 h1 {
     text-align: center;
 }
+@media (min-width: 400px) and (max-width: 900px) 
